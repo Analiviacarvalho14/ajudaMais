@@ -5,7 +5,7 @@
 *Plataforma digital que centraliza instituições de caridade em perfis detalhados e transparentes.*
 
 
-*[Landing page](https://fredd-08.github.io/ajuda-landingpage/)*
+*Acesse aqui nossa [landing page](https://fredd-08.github.io/ajuda-landingpage/)*
 
 <br>
 
@@ -23,7 +23,7 @@ O sistema também facilita o ato de doar, com filtros por região e por tipo de 
 
 Muitas pessoas querem ajudar, mas têm medo de cair em golpes ou de não saberem para onde o dinheiro realmente vai.
 
-As principais dores que identificamos foram:
+As principais dores identificadas foram:
 
 - Segurança e fraude: Medo de sites falsos, de roubo de dados e de enviar dinheiro para quem não é da causa;
 - Confiança e honestidade: Dúvida se a ONG existe e é séria, falta de transparência sobre o uso do dinheiro e falta de prova do impacto da doação;
@@ -46,6 +46,7 @@ Cadastram o perfil, mostram sua missão e seus projetos urgentes, e publicam rec
 
 ## Funcionalidades
 
+### Requisitos funcionais
 - Cadastro e login de usuários e de ONGs, com perfis editáveis;
 - Perfil detalhado de cada instituição (identidade, missão, projetos urgentes);
 - Relatório financeiro da ONG com gráficos (Chart.js) e extrato em PDF;
@@ -59,7 +60,11 @@ Cadastram o perfil, mostram sua missão e seus projetos urgentes, e publicam rec
 - Validação e máscara de CPF, CNPJ e telefone;
 - Paginação, página de perguntas frequentes e termos de serviço;
 - Layout responsivo, para celular e computador;
-- Criptografia de senhas.
+
+  ### Requisitos não-funcionais
+- Criptografia de senhas;
+- Tempo de resposta rápido.
+   
 <br>
 
  ## Tecnologias utilizadas e por quê
