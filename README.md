@@ -5,18 +5,19 @@
 *Plataforma digital que centraliza instituições de caridade em perfis detalhados e transparentes.*
 
 
-[Landing page](https://fredd-08.github.io/ajuda-landingpage/) 
+*[Landing page](https://fredd-08.github.io/ajuda-landingpage/)*
 
+<br>
 
- ## Sobre o projeto
+ ### Sobre o projeto
 
 O Ajuda+ é uma plataforma digital que reúne instituições de caridade em perfis detalhados e transparentes. A confiança do doador vem de extratos públicos que mostram toda a movimentação financeira de receitas e despesas de cada instituição.
 
 O sistema também facilita o ato de doar, com filtros por região e por tipo de apoio, e dá mais visibilidade às instituições com menos recursos, para que a ajuda seja distribuída de forma mais justa.
 
-
 *Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC), na área de organização sem fins lucrativos.*
 
+<br>
 
 ## Problema e objetivo
 
@@ -29,6 +30,7 @@ As principais dores que identificamos foram:
 - Privacidade e usabilidade: Medo de receber cobranças insistentes, burocracia e formulários longos.
 - Objetivo: Oferecer um sistema com instituições seguras e confiáveis, com pagamento rápido e simples.
 
+<br>
 
 ## Como utilizar o Ajuda+
 
@@ -40,6 +42,7 @@ Pesquisam instituições, filtram por região e categoria, acompanham o extrato 
 
 Cadastram o perfil, mostram sua missão e seus projetos urgentes, e publicam receitas e despesas no relatório
 
+<br>
 
 ## Funcionalidades
 
@@ -57,7 +60,7 @@ Cadastram o perfil, mostram sua missão e seus projetos urgentes, e publicam rec
 - Paginação, página de perguntas frequentes e termos de serviço;
 - Layout responsivo, para celular e computador;
 - Criptografia de senhas.
-
+<br>
 
  ## Tecnologias utilizadas e por quê
 
@@ -91,15 +94,19 @@ Guarda com segurança os dados de usuários, ONGs, doações e imagens, com rela
 Gráficos financeiros;
 Mostra receitas e despesas de forma visual e fácil de entender.
 
+<br>
 
 **Ferramentas de apoio:** Git e GitHub (versionamento, branches e Kanban com GitHub Projects), Canva (wireframe e protótipo), Google Sheets (controle de tarefas e horas) e GitHub Pages (landing page).
 
+<br>
 
 ## Tempo de desenvolvimento:
 
 - **Período:** 18/03/2026 a 23/10/2026;
 - **Horas totais do grupo:** aproximadamente 462 horas, somando as horas previstas de cada tarefa multiplicadas pelo número de integrantes que trabalharam nela;
 - **Metodologia:** sprints semanais com Retro & Review, tarefas organizadas em Kanban e branches no Git para mexer no código com segurança;
+
+<br>
 
 ## Equipe
 
@@ -108,12 +115,11 @@ Mostra receitas e despesas de forma visual e fácil de entender.
 - Alany: Front-end & design;
 - Gabriel: Full-stack & BD;
 
-
-
-## Organização do time
-
+### Organização do time
 O desenvolvimento foi dividido em sprints. Em vez de várias pessoas na mesma tarefa, cada integrante ficou responsável por páginas específicas. Cada alteração é feita em uma branch e integrada ao código principal pela líder, depois dos testes.
 
+
+<br>
 
 ## Documentação
 
@@ -124,6 +130,7 @@ O desenvolvimento foi dividido em sprints. Em vez de várias pessoas na mesma ta
 - Roteiro e apresentação do pitch
 - Controle de tarefas e Kanban
 
+<br>
 
 # Como executar o projeto
 
