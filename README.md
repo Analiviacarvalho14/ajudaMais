@@ -1,4 +1,3 @@
-<div align="center">
 # Ajuda+
 ![Logo do ajuda+](ajuda+logo.png)
 
@@ -10,8 +9,6 @@ Plataforma digital que centraliza instituições de caridade em perfis detalhado
 
 Landing page 
 
-
-</div>
 
  Sobre o projeto
 
