@@ -1,7 +1,7 @@
 # Ajuda+
 ![Logo do ajuda+](ajuda+logo.png)
 
-## *Apoio e conexão para você*
+### *Apoio e conexão para você*
 *Plataforma digital que centraliza instituições de caridade em perfis detalhados e transparentes.*
 
 
@@ -9,7 +9,7 @@
 
 <br>
 
- ### Sobre o projeto
+ ## Sobre o projeto
 
 O Ajuda+ é uma plataforma digital que reúne instituições de caridade em perfis detalhados e transparentes. A confiança do doador vem de extratos públicos que mostram toda a movimentação financeira de receitas e despesas de cada instituição.
 
