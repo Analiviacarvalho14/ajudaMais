@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda Gov - Categorias</title>
+    <link rel="stylesheet" href="../CSS/background.css">
+    <link rel="stylesheet" href="../CSS/cabecalho.css">
+    <link rel="stylesheet" href="../CSS/categorias.css">
+    <link rel="stylesheet" href="../CSS/rodapeGov.css">
+    <script src="../JS/config.js"></script>
+    <script src="../JS/sessao.js"></script>
+    <script src="../JS/categorias.js"></script>
+    <script src="../JS/buscas.js"></script>
+</head>
+
+<body>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <header>
+        <a href="paginaEntrada.html"><img src="../IMG/ajuda+logo.png" width="250" height="150"
+                alt="Logo Ajuda Gov"></a>
+        <div class="busca">
+            <div class="busca-input">
+                <input type="text" placeholder="Pesquisa ONG" id="input-busca">
+            </div>
+            <ul id="lista-sugestoes" class="sugestoes">
+                <a href="categorias.html">
+                    <li onclick="location.href='categorias.html'">🕒 Saúde</li>
+                </a>
+                <a href="./detalheDoacao.html">
+                    <li onclick="location.href='doacao.html'">🕒 Doação</li>
+                </a>
+                <a href="./missaoOng.html">
+                    <li onclick="location.href='missaoOng.html'">🕒 Cadastrar ONG</li>
+                </a>
+                <a href="./cadastroUsuario.html">
+                    <li onclick="location.href='cadastroUsuario.html'">🕒 Cadastrar Usuário</li>
+                </a>
+                <a href="./regioes.html">
+                    <li onclick="location.href='regioes.html'">🕒 Regiões</li>
+                </a>
+            </ul>
+        </div>
+        <a href="login.html" id="linkConta">
+            <div class="user-menu" id="areaConta">Entre na sua conta 👤</div>
+        </a>
+    </header>
+
+    <div class="linha"></div>
+    <h2 class="titulo-principal">Projetos Sociais e Urgentes</h2>
+    <div class="linha"></div>
+
+
+    <main>
+        <nav id="navegacao-categorias" data-tipo="categoria">
+            <button class="botao-categoria ativo" data-filtro="todos">Todos</button>
+            <button class="botao-categoria" data-filtro="crianca">👶 Crianças</button>
+            <button class="botao-categoria" data-filtro="saude">🏥 Saúde</button>
+            <button class="botao-categoria" data-filtro="idoso">👴 Idosos</button>
+            <button class="botao-categoria" data-filtro="animal">🐾 Animais</button>
+            <button class="botao-categoria botao-limpar" type="button">Limpar</button>
+        </nav>
+
+        <div class="bloco-conteudo">
+
+            <!-- Os cards ".cartao-ong" são inseridos aqui dinamicamente pelo categorias.js -->
+             
+            <div class="lista-ongs" id="lista-ongs"></div>
+            <div id="paginacao-ongs" class="container-paginacao"></div>
+        </div>
+    </main>
+
+    <footer class="rodape-ajuda">
+        <div class="container-ajuda">
+            <div class="coluna-logo">
+                <h1 class="logo-ajuda">Ajuda +</h1>
+            </div>
+            <div class="coluna-links">
+                <h2>ONGS EM DESTAQUE</h2>
+                <ul>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="projetosUrgentes.html">Projetos urgentes</a></li>
+            </div>
+            <div class="coluna-links">
+                <h2>SOBRE NÓS</h2>
+                <ul>
+                    <li><a href="termosServico.html">Termos e condições de uso</a></li>
+                    <li><a href="perguntasFrequentes.html">Perguntas frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

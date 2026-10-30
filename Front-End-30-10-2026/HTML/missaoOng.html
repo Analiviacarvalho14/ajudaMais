@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda Gov - Cadastro de ONGs</title>
+    <link rel="stylesheet" href="../CSS/background.css">
+    <link rel="stylesheet" href="../CSS/cabecalho.css">
+    <link rel="stylesheet" href="../CSS/missaoOng.css">
+</head>
+
+<body>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <header>
+        <a href="paginaEntrada.html">
+            <img src="../IMG/ajuda+logo.png" width="250" height="150" alt="Logo Ajuda Gov">
+        </a>
+    </header>
+    <div class="linha"></div>
+
+    <!-- BALÃO NOTIFICAÇÃO -->
+    <div id="balaoNumero" class="tooltip-balao">
+        ⚠️ Não se esqueça de preencher o <b>Número da residência</b>!
+    </div>
+
+    <main>
+        <div class="progress-container">
+            <div class="step-tab active" id="tab-1">1-Identidade</div>
+            <div class="step-tab" id="tab-2">2-Missão</div>
+            <div class="step-tab" id="tab-3">3-Financeiro</div>
+            <div class="step-tab" id="tab-4">4-Finalizar</div>
+        </div>
+
+        <form id="ongForm" novalidate>
+
+            <!-- ETAPA 1 -->
+            <div class="form-step active" id="step-1">
+                <div class="grid-2">
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="nomeOng">Nome da ONG*</label>
+                            <input type="text" id="nomeOng" class="input-control" required placeholder="Apenas letras e espaços">
+                            <div class="error-message">Insira um nome válido (máx. 100 caracteres).</div>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="cnpj">CNPJ*</label>
+                            <input type="text" id="cnpj" class="input-control" required placeholder="00.000.000/0001-00">
+                            <div class="error-message">Insira um CNPJ válido com 14 dígitos.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LINHA DO CEP E NÚMERO DINÂMICO -->
+                <div class="grid-2">
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="cep">CEP*</label>
+                            <input type="text" id="cep" class="input-control" required placeholder="00000-000" maxlength="9">
+                            <div class="error-message">Insira um CEP válido.</div>
+                        </div>
+                    </div>
+                    <div class="grid-col" id="col-numero" style="display: none;">
+                        <div class="form-group">
+                            <label for="numeroResidencia">Número / Complemento*</label>
+                            <input type="text" id="numeroResidencia" class="input-control" placeholder="Ex: 123, Bloco A" maxlength="20">
+                            <div class="error-message">O número é obrigatório.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="endereco">Endereço*</label>
+                            <input type="text" id="endereco" class="input-control" required placeholder="Endereço completo da sede" maxlength="120">
+                            <div class="error-message">O endereço é obrigatório.</div>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="cidade">Cidade*</label>
+                            <input type="text" id="cidade" class="input-control" required placeholder="Ex: São Carlos" maxlength="60">
+                            <div class="error-message">A cidade é obrigatória.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="telefone">Telefone*</label>
+                            <input type="text" id="telefone" class="input-control" required placeholder="(00) 00000-0000">
+                            <div class="error-message">Insira um número de telefone válido.</div>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="email">E-mail*</label>
+                            <input type="email" id="email" class="input-control" required placeholder="exemplo@ong.org.br">
+                            <div class="error-message">Insira um endereço de e-mail válido.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="senha">Senha*</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="senha" class="input-control" required placeholder="Mínimo 8 caracteres">
+                                <button type="button" class="password-toggle" onclick="togglePassword('senha')">Ver</button>
+                            </div>
+                            <div class="error-message">A senha deve ter no mínimo 8 caracteres e um caractere especial.</div>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="confirmarSenha">Confirmar senha*</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="confirmarSenha" class="input-control" required placeholder="Repita a senha">
+                                <button type="button" class="password-toggle" onclick="togglePassword('confirmarSenha')">Ver</button>
+                            </div>
+                            <div class="error-message">As senhas não coincidem.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ETAPA 2 -->
+            <div class="form-step" id="step-2">
+                <div class="grid-2">
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="atuacao">Áreas de atuação</label>
+                            <select class="custom-select" id="atuacao">
+                                <option value="">Selecione...</option>
+                                <option value="Crianças">Crianças</option>
+                                <option value="Idosos">Idosos</option>
+                                <option value="Animais">Animais</option>
+                                <option value="Outra">Outra...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="regiao">Região de atuação</label>
+                            <select class="custom-select" id="regiao">
+                                <option value="">Selecione...</option>
+                                <option value="Norte">Norte</option>
+                                <option value="Nordeste">Nordeste</option>
+                                <option value="Centro-Oeste">Centro-Oeste</option>
+                                <option value="Sudeste">Sudeste</option>
+                                <option value="Sul">Sul</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="urgencia">Nível de urgência</label>
+                            <select class="custom-select" id="urgencia">
+                                <option value="">Selecione...</option>
+                                <option value="perigo-imediato">Perigo imediato</option>
+                                <option value="perigo">Perigo</option>
+                                <option value="atencao">Atenção</option>
+                                <option value="contido">Contido</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-2">
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="suaHistoria">Sua história e objetivo</label>
+                            <textarea id="suaHistoria" class="input-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label>Logomarca e fotos</label>
+                            <input type="file" id="inputFoto" accept="image/*" multiple style="display: none;">
+                            <button type="button" class="btn-upload" onclick="document.getElementById('inputFoto').click()">
+                                📷 Selecionar Logomarca / Fotos
+                            </button>
+                            <div id="nomeArquivo" class="file-name-preview">Nenhum arquivo selecionado</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ETAPA 3 -->
+            <div class="form-step" id="step-3">
+                <div class="form-group">
+                    <label for="banco">Banco*</label>
+                    <select id="banco" class="input-control select-banco" required>
+                        <option value="">Selecione o banco...</option>
+                        <option value="Itaú Unibanco">Itaú Unibanco</option>
+                        <option value="Banco do Brasil">Banco do Brasil</option>
+                        <option value="Bradesco">Bradesco</option>
+                        <option value="Caixa Econômica Federal">Caixa Econômica Federal</option>
+                        <option value="Santander">Santander</option>
+                        <option value="Nubank">Nubank</option>
+                        <option value="Banco Inter">Banco Inter</option>
+                        <option value="C6 Bank">C6 Bank</option>
+                        <option value="Outro">Outro...</option>
+                    </select>
+                    <div class="error-message">Selecione um banco válido.</div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="agencia">Número da agência*</label>
+                            <input type="text" id="agencia" class="input-control" required placeholder="0000-0">
+                            <div class="error-message">Agência inválida (máx. 5 dígitos).</div>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="conta">Número da conta*</label>
+                            <input type="text" id="conta" class="input-control" required placeholder="00000000-0" maxlength="12">
+                            <div class="error-message">Conta inválida (máx. 12 dígitos).</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="cnpjFinanceiro">CNPJ*</label>
+                            <input type="text" id="cnpjFinanceiro" class="input-control" required placeholder="00.000.000/0001-00">
+                            <div class="error-message">CNPJ obrigatório.</div>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="form-group">
+                            <label for="pix">PIX</label>
+                            <input type="text" id="pix" class="input-control" placeholder="Chave PIX">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="orcamento">Orçamento anual*</label>
+                    <input type="text" id="orcamento" class="input-control" required placeholder="R$ 0,00">
+                    <div class="error-message">Por favor, indique um valor numérico válido.</div>
+                </div>
+            </div>
+
+            <!-- ETAPA 4 -->
+            <div class="form-step" id="step-4">
+                <div class="grid-2">
+                    <div class="grid-col">
+                        <b class="review-title">Informações</b>
+                        <div class="form-group">
+                            <label for="pessoaContato">Pessoa de Contato</label>
+                            <input type="text" id="pessoaContato" class="input-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="numeroPessoal">Número pessoal</label>
+                            <input type="text" id="numeroPessoal" class="input-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="documentosInfo">Documentos de info</label>
+                            <input type="text" id="documentosInfo" class="input-control">
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <b class="review-title">Revisão de Dados</b>
+                        <label class="checkbox-group"><input type="checkbox"> <span>Dados Verificados</span></label>
+                        <label class="checkbox-group"><input type="checkbox"> <span>Documentos Anexados</span></label>
+
+                        <div style="margin-top: 30px;">
+                            <label class="checkbox-group">
+                                <input type="checkbox" id="termos" required>
+                                <strong>Aceito os <a href="termosServico.html">termos e condições de uso</a></strong>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTÕES -->
+            <div class="footer-actions">
+                <button type="button" id="btnVoltar" class="btn-action btn-secondary" style="display: none;" onclick="navigateStep(-1)">Voltar</button>
+                <button type="button" id="btnProsseguir" class="btn-action" onclick="navigateStep(1)">Prosseguir</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="../JS/missaoOng.js"></script>
+</body>
+
+</html>

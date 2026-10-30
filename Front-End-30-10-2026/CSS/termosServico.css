@@ -1,0 +1,40 @@
+.formatacao {
+    margin-left: 20px;
+}
+
+.lista {
+    margin-left: 50px;
+}
+
+
+.formatacao {
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+    .formatacao {
+        margin: 0 16px;
+    }
+
+    .formatacao h1 {
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+
+    .formatacao h2 {
+        font-size: 1.2rem;
+    }
+
+    .formatacao h3 {
+        font-size: 1.05rem;
+    }
+
+    .formatacao p,
+    .formatacao li {
+        line-height: 1.6;
+    }
+
+    .lista {
+        margin-left: 20px;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda Gov - Cadastro de Usuário</title>
+    <link rel="stylesheet" href="../CSS/background.css">
+    <link rel="stylesheet" href="../CSS/cabecalho.css">
+    <link rel="stylesheet" href="../CSS/cadastroUsuario.css">
+</head>
+
+
+<body>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <header>
+        <a href="paginaEntrada.html"><img src="../IMG/ajuda+logo.png" width="800" height="500"
+                alt="Logo Ajuda Gov"></a>
+    </header>
+    <div class="linha"></div>
+
+
+    <main>
+        <h2 class="page-title">Cadastro de Usuário</h2>
+
+
+        <form id="usuarioForm" novalidate>
+            <div class="grid-2">
+                <div class="grid-col">
+                    <div class="form-group">
+                        <label for="nome">Nome completo*</label>
+                        <input type="text" id="nome" class="input-control" required
+                            placeholder="Apenas letras e espaços" maxlength="100">
+                        <div class="error-message">Insira um nome válido (máx. 100 caracteres).</div>
+                    </div>
+                </div>
+                <div class="grid-col">
+                    <div class="form-group">
+                        <label for="cpf">CPF*</label>
+                        <input type="text" id="cpf" class="input-control" required placeholder="000.000.000-00"
+                            maxlength="14">
+                        <div class="error-message">Insira um CPF válido com 11 dígitos.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="grid-2">
+                <div class="grid-col">
+                    <div class="form-group">
+                        <label for="email">E-mail*</label>
+                        <input type="email" id="email" class="input-control" required placeholder="exemplo@email.com">
+                        <div class="error-message">Insira um endereço de e-mail válido.</div>
+                    </div>
+                </div>
+                <div class="grid-col">
+                    <div class="form-group">
+                        <label for="telefone">Telefone*</label>
+                        <input type="text" id="telefone" class="input-control" required placeholder="(00) 00000-0000"
+                            maxlength="15">
+                        <div class="error-message">Insira um número de telefone válido.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="grid-2">
+                <div class="grid-col">
+                    <div class="form-group">
+                        <label for="senha">Senha*</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="senha" class="input-control" required
+                                placeholder="Mínimo 8 caracteres">
+                            <button type="button" class="password-toggle" onclick="togglePassword('senha')">Ver</button>
+                        </div>
+                        <div class="error-message">A senha deve ter no mínimo 8 caracteres.</div>
+                    </div>
+                </div>
+                <div class="grid-col">
+                    <div class="form-group">
+                        <label for="confirmarSenha">Confirmar senha*</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="confirmarSenha" class="input-control" required
+                                placeholder="Repita a senha">
+                            <button type="button" class="password-toggle"
+                                onclick="togglePassword('confirmarSenha')">Ver</button>
+                        </div>
+                        <div class="error-message">As senhas não coincidem.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="margin-top: 10px;">
+                <label class="checkbox-group">
+                    <input type="checkbox" id="termos" required>
+                    <strong>Aceito os <a href="termosServico.html">termos e condições de uso</a></strong>
+                </label>
+            </div>
+
+
+            <p id="mensagem-erro-cadastro" class="error-message"
+                style="display:none; font-size: 14px; margin-top: 10px;"></p>
+
+
+            <div class="footer-actions">
+                <button type="submit" id="btnFinalizarUsuario" class="btn-enviar">Finalizar Cadastro</button>
+            </div>
+        </form>
+    </main>
+
+
+    <!-- Importação única dos scripts no final da página -->
+    <script src="../JS/config.js"></script>
+    <script src="../JS/sessao.js"></script>
+    <script src="../JS/cadastroUsuario.js"></script>
+</body>
+</html>

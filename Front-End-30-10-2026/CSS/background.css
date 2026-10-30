@@ -1,0 +1,31 @@
+/* ==========================================
+   ESTILO GLOBAL — reset, paleta de cores (tokens)
+   e base tipografica do site.
+   Este arquivo deve ser o PRIMEIRO <link> de CSS
+   em toda pagina, antes de cabecalho.css e do
+   CSS especifico da pagina.
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vermelho-perigo: #ff4d4d;
+    --laranja-perigo: #ff8c42;
+    --amarelo-atencao: #ffcc00;
+    --verde-contido: #69aa1e;
+    --cinza-fundo: #f5f5f5;
+    --azul-escuro: #003366;
+    --azul-destaque: #2c5282;
+    --azul-card: #2c6eb5;
+    --cinza-card: #fafafa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: var(--azul-escuro);
+}

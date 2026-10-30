@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda Gov - Mockup</title>
+    <link rel="stylesheet" href="../CSS/background.css">
+    <link rel="stylesheet" href="../CSS/cabecalho.css">
+    <link rel="stylesheet" href="../CSS/paginaEntrada.css">
+    <link rel="stylesheet" href="../CSS/rodapeGov.css">
+    <link rel="stylesheet" href="../CSS/relatorioOng.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+
+<body>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <header>
+        <a href="paginaEntrada.html">
+            <img src="../IMG/ajuda+logo.png" width="250" height="150" alt="Logo Ajuda Gov">
+        </a>
+
+        <div class="busca">
+            <div class="busca-input">
+                <input type="text" placeholder="Pesquisa ONG" id="input-busca">
+            </div>
+            <ul id="lista-sugestoes" class="sugestoes"></ul>
+        </div>
+
+
+        <a href="login.html" id="linkConta">
+            <div class="user-menu" id="areaConta">Entre na sua conta 👤</div>
+        </a>
+    </header>
+
+    <div class="linha"></div>
+    <h2 class="titulo-principal">APOIO E CONEXÃO PARA VOCÊ</h2>
+    <div class="linha"></div>
+
+    <!-- CONTEÚDO PRINCIPAL DO RELATÓRIO DA ONG -->
+    <main class="container-relatorio">
+
+
+        <!-- SEÇÃO SUPERIOR: HISTÓRIA E SOBRE DA ONG -->
+        <section class="top-cards">
+            <div class="card card-story">
+                <h2>Nossa História</h2>
+                <p id="historiaText">Buscando dados do banco...</p>
+            </div>
+
+            <div class="card card-mission">
+                <div id="imgLogo">
+                </div>
+                <div class="mission-info">
+                    <h2 id="nomeOngText">QUEM SOMOS E NOSSA MISSÃO</h2>
+                    <p id="descricaoText">Buscando dados do banco...</p>
+                    <p id="numText">Buscando dados do banco...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO RESUMO FINANCEIRO -->
+        <section class="financial-section">
+            <div class="financial-header">
+                <span class="financial-title">Resumo financeiro</span>
+                <div class="filter-tabs">
+                    <button class="tab-btn active" onclick="filtrarFinanceiro('hora', this)">ÚLTIMA HORA</button>
+                    <button class="tab-btn" onclick="filtrarFinanceiro('hoje', this)">HOJE</button>
+                    <button class="tab-btn" onclick="filtrarFinanceiro('semana', this)">ÚLTIMA SEMANA</button>
+                    <button class="tab-btn" onclick="filtrarFinanceiro('mes', this)">ÚLTIMO MÊS</button>
+                    <button class="tab-btn" onclick="filtrarFinanceiro('ano', this)">ÚLTIMO ANO</button>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="financialChart"></canvas>
+            </div>
+        </section>
+
+
+        <!-- SEÇÃO INFERIOR -->
+        <section class="bottom-grid">
+
+            <div class="grid-card">
+                <h2 class="grid-title">O QUE PRECISAMOS</h2>
+                <div class="table-box">
+                    <table>
+                        <tbody id="necessidadesTable">
+                            <tr>
+                                <td>Comida</td>
+                                <td class="urgency-high">Urgente</td>
+                            </tr>
+                            <tr>
+                                <td>Dinheiro</td>
+                                <td class="urgency-critical">Muito urgente</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <h2 class="grid-title">AJUDE AGORA</h2>
+                <div class="help-box">
+                    <div class="pill-button" onclick="fazerDoacaoRapida()">
+                        <em>Dinheiro</em>
+                    </div>
+                    <div class="pill-button">
+                        <a href="detalheDoacao.html"><em>Doação material</em></a>
+                    </div>
+                    <small id="infoConta" style="margin-top: 5px; color: #1a5b8c; font-weight: bold;"></small>
+                </div>
+            </div>
+
+
+            <div class="grid-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <h2 class="grid-title" style="margin: 0;">EXTRATO</h2>
+                    <button onclick="gerarPdfExtrato()" class="btn-pdf">
+                        <i class="fa-solid fa-file-pdf"></i> Baixar PDF
+                    </button>
+                </div>
+                <div class="table-box">
+                    <!-- Área com scroll: quando houver muitas doações, só ela rola -->
+                    <div class="extrato-scroll">
+                        <table class="statement-table">
+                            <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Tipo</th>
+                                    <th>Valor</th>
+                                </tr>
+                            </thead>
+                            <tbody id="extratoTable">
+                                <tr>
+                                    <td colspan="3">Buscando dados do banco...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-ajuda">
+        <div class="container-ajuda">
+            <div class="coluna-logo">
+                <h1 class="logo-ajuda">Ajuda +</h1>
+            </div>
+            <div class="coluna-links">
+                <h2>ONGS EM DESTAQUE</h2>
+                <ul>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="projetosUrgentes.html">Projetos urgentes</a></li>
+                </ul>
+            </div>
+            <div class="coluna-links">
+                <h2>SOBRE NÓS</h2>
+                <ul>
+                    <li><a href="termosServico.html">Termos e condições de uso</a></li>
+                    <li><a href="perguntasFrequentes.html">Perguntas frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../JS/config.js"></script>
+    <script src="../JS/sessao.js"></script>
+    <script src="../JS/paginaEntrada.js"></script>
+    <script src="../JS/relatorioOng.js"></script>
+    <script>
+        const inputBusca = document.getElementById('input-busca');
+        const listaSugestoes = document.getElementById('lista-sugestoes');
+        inputBusca.addEventListener('focus', () => { listaSugestoes.style.display = 'block'; });
+        document.addEventListener('click', (e) => {
+            if (!inputBusca.contains(e.target) && !listaSugestoes.contains(e.target)) {
+                listaSugestoes.style.display = 'none';
+            }
+        });
+    </script>
+
+    <!-- MODAL DE DOAÇÃO PIX -->
+    <div id="modalDoacao" class="modal-container" style="display: none;">
+        <div class="modal-content">
+            <span class="modal-close" onclick="fecharModalDoacao()">&times;</span>
+
+            <!-- ETAPA 1: DIGITAR VALOR -->
+            <div id="etapaValor">
+                <h3>Doação via Pix</h3>
+                <p>Informe o valor que deseja doar para a ONG:</p>
+                <div class="input-valor-group">
+                    <span>R$</span>
+                    <input type="number" id="valorDoacaoInput" placeholder="0" min="1" step="1">
+                </div>
+                <button class="btn-prosseguir" onclick="gerarQrCodePix()">Gerar QR Code</button>
+            </div>
+
+            <!-- ETAPA 2: EXIBIR QR CODE -->
+            <div id="etapaQrCode" style="display: none;">
+                <h3>Escaneie o QR Code</h3>
+                <p>Valor: <strong id="valorConfirmadoText">R$ 0,00</strong></p>
+
+                <div class="qrcode-wrapper">
+                    <img id="qrCodeImg" src="" alt="QR Code Pix">
+                </div>
+
+                <label for="pixCopiaCola">Pix Copia e Cola:</label>
+                <div class="copia-cola-box">
+                    <input type="text" id="pixCopiaCola" readonly value="00020126360014BR.GOV.BCB.PIX...">
+                    <button onclick="copiarPix()">Copiar</button>
+                </div>
+
+                <button class="btn-confirmar" onclick="confirmarDoacaoSimulada()">Simular Pagamento Confirmado</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

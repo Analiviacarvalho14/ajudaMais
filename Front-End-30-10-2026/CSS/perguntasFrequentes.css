@@ -1,0 +1,204 @@
+/* ==========================================================================
+   PERGUNTAS FREQUENTES & DOAÇÕES - ESTILO INSPIRADO NA INTERFACE GOV/PERFIL
+   ========================================================================== */
+
+/* Fonte Global e Reset Básico para a seção principal */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #1b365d;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Título Principal e Divisores --- */
+.titulo-principal {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  color: #1b365d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 32px 0 20px 0;
+}
+
+.linha {
+  width: 100%;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 0 auto;
+}
+
+/* --- Estrutura e Container Central --- */
+.main-faq {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 60px 20px;
+  background-color: #ffffff;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-descricao {
+  text-align: center;
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* --- Lista de Perguntas (FAQ Accordion em Estilo Card) --- */
+.faq-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Card Principal (Baseado nos blocos cinza-azulados da imagem) */
+.faq-item {
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.faq-item:hover {
+  border-color: #cbd5e1;
+}
+
+/* Pergunta / Cabeçalho do Card */
+.faq-pergunta {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1b365d;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  user-select: none;
+}
+
+/* Esconde o marcador padrão do <details> no Safari/Chrome */
+.faq-pergunta::-webkit-details-marker {
+  display: none;
+}
+
+/* Seta Indicadora com Rotação */
+.seta {
+  font-size: 12px;
+  color: #1b365d;
+  transition: transform 0.2s ease;
+  margin-left: 12px;
+}
+
+.faq-item[open] .seta {
+  transform: rotate(180deg);
+}
+
+/* Resposta Expandida (Estilizada como o Input Branco da imagem) */
+.faq-resposta {
+  margin-top: 14px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: 15px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.faq-resposta p {
+  margin: 0;
+}
+
+.faq-resposta a {
+  color: #1b365d;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.faq-resposta a:hover {
+  color: #2563eb;
+}
+
+/* --- Bloco Chamada para Ação (CTA Inferior) --- */
+.caixa-chamada {
+  margin-top: 20px;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.caixa-chamada h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b365d;
+  margin: 0;
+}
+
+/* Botão de Ação Primário */
+.btn-doar {
+  display: inline-block;
+  background-color: #1b365d;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn-doar:hover {
+  background-color: #132744;
+  transform: translateY(-1px);
+}
+
+.btn-doar:active {
+  transform: translateY(0);
+}
+
+/* --- Responsividade para Dispositivos Móveis --- */
+@media (max-width: 640px) {
+  .titulo-principal {
+    font-size: 20px;
+  }
+
+  .faq-container {
+    padding: 0 10px;
+  }
+
+  .faq-item {
+    padding: 14px 16px;
+  }
+
+  .faq-pergunta {
+    font-size: 15px;
+  }
+
+  .faq-resposta {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .btn-doar {
+    width: 100%;
+    text-align: center;
+  }
+}

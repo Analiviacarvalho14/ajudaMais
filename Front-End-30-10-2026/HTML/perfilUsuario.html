@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjudaGov - Perfil do Usuário</title>
+    <link rel="stylesheet" href="../CSS/perfilUsuario.css">
+    <link rel="stylesheet" href="../CSS/background.css">
+    <link rel="stylesheet" href="../CSS/cabecalho.css">
+    <link rel="stylesheet" href="../CSS/rodapeGov.css">
+</head>
+<body>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <header style="display: flex; justify-content: center;">
+        <a href="paginaEntrada.html">
+            <img src="../IMG/ajuda+logo.png" width="250" height="150" alt="Logo Ajuda Gov">
+        </a>
+    </header>
+
+    <div class="linha"></div>
+    <h2 class="titulo-principal">PERFIL USUÁRIO </h2>
+    <div class="linha"></div>
+
+    <main class="main-container">
+        <div class="form-container">
+            
+            <div class="card-group">
+                <label>CPF</label>
+                <p id="view-cpf" class="field-view-value">Carregando...</p>
+            </div>
+
+            <div class="card-group">
+                <label>Nome Completo</label>
+                <p id="view-nome" class="field-view-value">Carregando...</p>
+            </div>
+
+            <div class="card-group">
+                <label>E-mail</label>
+                <p id="view-email" class="field-view-value">Carregando...</p>
+            </div>
+
+           
+
+            <div class="card-group">
+                <label>Telefone</label>
+                <p id="view-telefone" class="field-view-value">Carregando...</p>
+            </div>
+
+            <div class="button-container btn-group">
+                <a href="editarPerfilUsuario.html" class="btn-submit btn-link">Editar Perfil</a>
+                <button type="button" id="btn-logout" class="btn-submit btn-logout">Sair da Conta</button>
+                <button type="button" id="btn-return" class="btn-return">Voltar</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="rodape-ajuda">
+        <div class="container-ajuda">
+            <div class="coluna-logo">
+                <h1 class="logo-ajuda">Ajuda +</h1>
+            </div>
+            <div class="coluna-links">
+                <h2>ONGS EM DESTAQUE</h2>
+                <ul>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="projetosUrgentes.html">Projetos urgentes</a></li>
+            </div>
+            <div class="coluna-links">
+                <h2>SOBRE NÓS</h2>
+                <ul>
+                    <li><a href="termosServico.html">Termos e condições de uso</a></li>
+                    <li><a href="perguntasFrequentes.html">Perguntas frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/perfilUsuario.js"></script>
+</body>
+</html>

@@ -1,0 +1,569 @@
+.filtro {
+    background-color: var(--cinza-card); 
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.filtro h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.2rem;
+    color: var(--azul-destaque);
+    text-align: center; 
+}
+
+.filtro ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filtro li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.filtro li::before {
+    content: "•";
+    color: var(--azul-destaque);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.filtro a {
+    text-decoration: none; 
+    color: var(--azul-escuro); 
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.filtro a:hover {
+    color: var(--azul-card);
+    transform: scale(1.1); 
+    transform-origin: left; 
+}
+.linha-vertical {
+    width: 2px;
+    background-color: #eee; 
+    align-self: stretch; 
+    margin: 0 10px; 
+}
+
+/* ==========================================
+   3. GRID DE ONGS
+   ========================================== */
+.conteudo {
+    flex: 1;
+}
+
+.grid-ongs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.card-ong {
+    background-color: var(--azul-card);
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+    height: 160px; 
+    max-width: 400px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+}
+
+.card-desc {
+    margin: 0;
+    width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: #e0e0e0;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+.card-ong:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-ong-foto {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background-color: white;
+}
+
+.sem-resultados {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+#btn-anterior, #btn-proximo{
+    background-color: #4384ca;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+#btn-anterior:hover {
+    background-color: #2c5282;
+}
+
+#btn-proximo:hover {
+    background-color: #2c5282;
+}
+
+.container-paginacao{
+    height: 40px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+}
+
+#numPagina{
+    margin-top: 10px;
+    padding: 0px 15px;
+}
+
+
+/* ==========================================
+   4. SEÇÃO DE PROJETOS URGENTES
+   ========================================== */
+.projetos-urgentes {
+    text-align: center;
+    width: 100%;               
+    padding-top: 30px;         
+    margin-top: 40px;         
+    font-size: 1.3rem;
+}
+
+a{
+        text-decoration: none;
+
+}
+
+.sidebar-legenda {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.lista-legenda {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-legenda li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: var(--azul-escuro);
+}
+
+.bola {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+.card-urgente:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+
+/* 1. Alinha a Legenda e a Coluna da Direita pelo topo */
+.urgentes {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* 2. Controla a coluna da direita sem quebrar a linha */
+.conteudo-direita {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+}
+
+/* 3. Troque "width: 800px" por "max-width: 800px" nos cards */
+.card-urgente {
+    display: flex;
+    max-width: 800px; /* Mudado de width: 800px para flexibilizar */
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    align-items: center;
+    gap: 20px;
+    border: 3px solid transparent;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* 4. Ajustes nos espaçamentos internos */
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+.conteudo-urgentes {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.card-urgente.perigo-imediato { border-color: var(--vermelho-perigo); box-shadow: 0 0 10px rgba(255, 77, 77, 0.2); }
+.card-urgente.perigo { border-color: var(--laranja-perigo); }
+.card-urgente.atencao { border-color: var(--amarelo-atencao); }
+.card-urgente.contido { border-color: var(--verde-contido); }
+
+.info-principal, .info-necessidades {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    border-radius: 10px;
+    flex: 1;
+    background-color: #fafbfc;
+}
+
+.info-principal strong, .info-necessidades strong {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: var(--azul-escuro);
+}
+
+.info-principal span, .info-necessidades span {
+    font-style: italic;
+    color: #666;
+    font-size: 13px;
+}
+
+.btn-mais {
+    background-color: var(--azul-card);
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition: background 0.2s ease;
+    display: flex;
+}
+
+.btn-return {
+    width: 100%;
+    background-color: #ffffff;
+    color: #5c5c5c;
+    border: 2px solid #5e5e5e;
+    padding: 14px 28px;
+    border-radius: 25px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+.btn-mais:hover {
+    background-color: #1e427a;
+}
+
+/* ==========================================
+   5. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================== */
+@media (max-width: 992px) {
+    .container, .urgentes {
+        flex-direction: column;
+    }
+    .sidebar, .sidebar-legenda {
+        width: 100%;
+    }
+    .grid-ongs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-urgente {
+        flex-direction: column;
+        text-align: center;
+    }
+    .info-principal, .info-necessidades {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-ongs {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==========================================
+   6. AJUSTES DE RESPONSIVIDADE (celular)
+   ========================================== */
+.conteudo,
+.conteudo-urgentes {
+    min-width: 0;
+}
+
+.card-header {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.card-urgente {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.card-urgente img {
+    flex-shrink: 0;
+}
+
+#lista-urgentes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+@media (max-width: 992px) {
+    .container {
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .linha-vertical {
+        display: none;
+    }
+
+    .filtro {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .filtro ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .filtro li,
+    .lista-legenda li {
+        margin-bottom: 0;
+        padding: 6px 14px;
+        border: 1px solid #cfd8e6;
+        border-radius: 20px;
+        background: #fff;
+    }
+
+    .filtro li::before {
+        display: none;
+    }
+
+    .filtro a:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-ong {
+        height: auto;
+        min-height: 160px;
+        max-width: 100%;
+    }
+
+    .card-header {
+        font-size: 1.15rem;
+    }
+
+    .card-urgente {
+        padding: 12px;
+    }
+
+    .btn-mais {
+        width: 100%;
+    }
+}
+
+@media (hover: none) {
+    .card-ong:hover,
+    .card-urgente:hover {
+        transform: none;
+    }
+}
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        padding: 15px 20px;
+    }
+
+    .sidebar h3 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .legend-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 18px;
+    }
+
+    .legend-list li {
+        margin-bottom: 0;
+    }
+
+    .linha-vertical {
+        display: none;
+    }
+
+    .content {
+        width: 100%;
+        padding-left: 0;
+        gap: 18px;
+    }
+}
+
+/* ==========================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================== */
+
+/* Tablets e telas menores (até 992px) */
+@media (max-width: 992px) {
+    /* Empilha a Legenda e a área do Conteúdo */
+    .urgentes {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sidebar-legenda {
+        width: 100%;
+    }
+
+    /* Esconde a linha divisória vertical no modo empilhado */
+    .linha-vertical {
+        display: none;
+    }
+
+    /* Ajusta a coluna da direita para ocupar 100% da tela */
+    .conteudo-direita {
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        padding-left: 0;
+        gap: 18px;
+    }
+
+    /* Cards empilham suas informações internamente */
+    .card-urgente {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .info-principal, 
+    .info-necessidades {
+        width: 100%;
+    }
+
+    /* Formatação dos itens da legenda em pílulas na horizontal */
+    .lista-legenda {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .lista-legenda li {
+        margin-bottom: 0;
+        padding: 6px 14px;
+        border: 1px solid #cfd8e6;
+        border-radius: 20px;
+        background: #fff;
+    }
+}
+
+/* Celulares (até 600px) */
+@media (max-width: 600px) {
+    .card-urgente {
+        padding: 12px;
+    }
+
+    /* Botão ocupa a largura total da tela no celular */
+    .btn-mais {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Remove efeito hover em telas de toque (touch) */
+@media (hover: none) {
+    .card-ong:hover,
+    .card-urgente:hover {
+        transform: none;
+    }
+}

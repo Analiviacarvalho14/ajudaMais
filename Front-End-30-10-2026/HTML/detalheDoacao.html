@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Doação</title>
+    <link rel="stylesheet" href="../CSS/background.css">
+    <link rel="stylesheet" href="../CSS/cabecalho.css">
+    <link rel="stylesheet" href="../CSS/detalheDoacao.css">
+    <link rel="stylesheet" href="../CSS/rodapeGov.css">
+</head>
+<body>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <header>
+        <a href="paginaEntrada.html">
+            <img src="../IMG/ajuda+logo.png" width="250" height="150" alt="Logo Ajuda Gov">
+        </a>
+        
+        <div class="busca">
+            <div class="busca-input">
+                <input type="text" placeholder="Pesquisa ONG" id="input-busca">
+            </div>
+            <ul id="lista-sugestoes" class="sugestoes">
+                <li><a href="categorias.html">🕒 Saúde</a></li>
+                <li><a href="./detalheDoacao.html">🕒 Doação</a></li>
+                <li><a href="./missaoOng.html">🕒 Cadastrar ONG</a></li>
+                <li><a href="./cadastroUsuario.html">🕒 Cadastrar Usuário</a></li>
+                <li><a href="./regioes.html">🕒 Regiões</a></li>
+            </ul>
+        </div>
+
+        <a href="login.html" id="linkConta">
+            <div class="user-menu" id="areaConta">Entre na sua conta 👤</div>
+        </a>
+    </header>
+
+    <div class="linha"></div>
+    <h2 class="titulo-principal">Projetos Sociais e Urgentes</h2>
+    <div class="linha"></div>
+
+    <main class="main-container-detalhes">
+        <div class="cards-grid-detalhes" id="container-cards">
+            
+            <!-- Caixa de Roupas -->
+            <div class="box-detalhe-item" data-categoria="roupas">
+                <h2 class="box-item-title">Roupas</h2>
+                
+                <div class="box-item-row">
+                    <div class="box-row-left">
+                        <label for="tipo-roupas">Tipo</label>
+                        <div class="select-wrapper">
+                            <select id="tipo-roupas" class="custom-select select-tipo">
+                                <option value="" disabled selected>Selecione</option>
+                            </select>
+                            <span class="custom-arrow">⌵</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-item-row">
+                    <div class="box-row-left">
+                        <label for="qtd-roupas">Quantidade</label>
+                        <div class="select-wrapper">
+                            <select id="qtd-roupas" class="custom-select select-qtd">
+                                <option value="" disabled selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <span class="custom-arrow">⌵</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caixa de Alimentos -->
+            <div class="box-detalhe-item" data-categoria="alimentos">
+                <h2 class="box-item-title">Alimentos</h2>
+                
+                <div class="box-item-row">
+                    <div class="box-row-left">
+                        <label for="tipo-alimentos">Tipo</label>
+                        <div class="select-wrapper">
+                            <select id="tipo-alimentos" class="custom-select select-tipo">
+                                <option value="" disabled selected>Selecione</option>
+                            </select>
+                            <span class="custom-arrow">⌵</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-item-row">
+                    <div class="box-row-left">
+                        <label for="qtd-alimentos">Quantidade</label>
+                        <div class="select-wrapper">
+                            <select id="qtd-alimentos" class="custom-select select-qtd">
+                                <option value="" disabled selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <span class="custom-arrow">⌵</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Botão para adicionar mais caixas/tabelas -->
+        <div class="container-acoes-extra">
+            <button type="button" id="btn-add-tabela" class="btn-secundario">+ Adicionar outra categoria de doação</button>
+        </div>
+
+        <!-- Botão Principal de Doar -->
+        <div class="container-botao-doar">
+            <button type="button" id="btn-doar" class="btn-doar">Doar</button>
+        </div>
+
+        <div id="toast-container"></div>
+    </main>
+
+    <footer class="rodape-ajuda">
+        <div class="container-ajuda">
+            <div class="coluna-logo">
+                <h1 class="logo-ajuda">Ajuda +</h1>
+            </div>
+            <div class="coluna-links">
+                <h2>ONGS EM DESTAQUE</h2>
+                <ul>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="projetosUrgentes.html">Projetos urgentes</a></li>
+                </ul>
+            </div>
+            <div class="coluna-links">
+                <h2>SOBRE NÓS</h2>
+                <ul>
+                    <li><a href="termosServico.html">Termos e condições de uso</a></li>
+                    <li><a href="perguntasFrequentes.html">Perguntas frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/config.js"></script>
+    <script src="../JS/sessao.js"></script>
+    <script src="../JS/detalheDoacao.js"></script>
+    <script src="../JS/buscas.js"></script>
+    <script>
+        const inputBusca = document.getElementById('input-busca');
+        const listaSugestoes = document.getElementById('lista-sugestoes');
+        inputBusca.addEventListener('focus', () => { listaSugestoes.style.display = 'block'; });
+        document.addEventListener('click', (e) => {
+            if (!inputBusca.contains(e.target) && !listaSugestoes.contains(e.target)) {
+                listaSugestoes.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

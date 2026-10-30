@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda GOV - Perguntas Frequentes e Doações</title>
+    <link rel="stylesheet" href="../CSS/background.css">
+    <link rel="stylesheet" href="../CSS/cabecalho.css">
+    <link rel="stylesheet" href="../CSS/rodapeGov.css">
+    <link rel="stylesheet" href="../CSS/perguntasFrequentes.css">
+    <script src="../JS/buscas.js"></script>
+</head>
+<body>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <header>
+        <a href="paginaEntrada.html"><img src="../IMG/ajuda+logo.png" width="250" height="150" alt="Logo Ajuda Gov"></a>
+        <div class="busca">
+            <div class="busca-input">
+                <input type="text" placeholder="Pesquisa ONG" id="input-busca">
+            </div>
+            <ul id="lista-sugestoes" class="sugestoes">
+                <a href="categorias.html"><li onclick="location.href='categorias.html'">🕒 Saúde</li></a>
+                <a href="./detalheDoacao.html"><li onclick="location.href='doacao.html'">🕒 Doação</li></a>
+                <a href="./missaoOng.html"><li onclick="location.href='missaoOng.html'">🕒 Cadastrar ONG</li></a>
+                <a href="./cadastroUsuario.html"><li onclick="location.href='cadastroUsuario.html'">🕒 Cadastrar Usuário</li></a>
+                <a href="./regioes.html"><li onclick="location.href='regioes.html'">🕒 Regiões</li></a>
+            </ul>
+        </div>
+        <a href="login.html" id="linkConta"><div class="user-menu" id="areaConta">Entre na sua conta 👤</div></a>
+    </header>
+
+    <div class="linha"></div>
+    <h2 class="titulo-principal">Dúvidas Frequentes e Como Doar</h2>
+    <div class="linha"></div>
+
+    <main class="main-faq">
+        <section class="faq-container">
+            <p class="faq-descricao">Confira abaixo como funcionam as doações para as ONGs cadastradas em nossa plataforma em todas as regiões do país.</p>
+
+            <div class="faq-lista">
+                <!-- Pergunta 1 -->
+                <details class="faq-item" open>
+                    <summary class="faq-pergunta">
+                        <span>💳 Como funciona a doação por PIX?</span>
+                        <span class="seta">▼</span>
+                    </summary>
+                    <div class="faq-resposta">
+                        <p>Você pode fazer doações em dinheiro diretamente para a chave PIX oficial da ONG selecionada. Ao acessar a página da instituição, a chave CNPJ/E-mail ou QR Code estará disponível para você transferir com segurança no aplicativo do seu banco.</p>
+                    </div>
+                </details>
+
+                <!-- Pergunta 2 -->
+                <details class="faq-item">
+                    <summary class="faq-pergunta">
+                        <span>👕 Como doar roupas, sapatos e cobertas?</span>
+                        <span class="seta">▼</span>
+                    </summary>
+                    <div class="faq-resposta">
+                        <p>Ao realizar uma doação física, você digitará no campo de texto a descrição dos objetos (exemplo: <em>"3 casacos de frio G, 2 pares de tênis nº 39 e 2 cobertas"</em>). A ONG receptora entrará em contato para combinar a entrega no ponto de coleta ou o envio.</p>
+                    </div>
+                </details>
+
+                <!-- Pergunta 3 -->
+                <details class="faq-item">
+                    <summary class="faq-pergunta">
+                        <span>🌾 Como funciona a doação de alimentos não perecíveis?</span>
+                        <span class="seta">▼</span>
+                    </summary>
+                    <div class="faq-resposta">
+                        <p>Assim como os objetos, você informa os itens e quantidades disponíveis (ex: <em>"5kg de arroz, 3kg de feijão, 2L de óleo"</em>). As instituições cadastradas organizam o recebimento dos mantimentos para distribuição nas comunidades necessitadas.</p>
+                    </div>
+                </details>
+
+                <!-- Pergunta 4 -->
+                <details class="faq-item">
+                    <summary class="faq-pergunta">
+                        <span>🗺️ Posso doar para ONGs de diferentes regiões do Brasil?</span>
+                        <span class="seta">▼</span>
+                    </summary>
+                    <div class="faq-resposta">
+                        <p>Sim! O portal conecta doadores a projetos em todo o Brasil (Norte, Nordeste, Centro-Oeste, Sudeste e Sul). Você pode filtrar as ONGs por região ou estado na página de <a href="regioes.html">Regiões</a>.</p>
+                    </div>
+                </details>
+
+                <!-- Pergunta 5 -->
+                <details class="faq-item">
+                    <summary class="faq-pergunta">
+                        <span>📝 Onde escrevo o que quero doar?</span>
+                        <span class="seta">▼</span>
+                    </summary>
+                    <div class="faq-resposta">
+                        <p>Na aba de doações de cada ONG, você encontrará um formulário interativo onde poderá selecionar a categoria da doação e digitar detalhadamente todos os itens que possui para doar antes de confirmar o envio.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="caixa-chamada">
+                <h3>Quer contribuir com alguma causa agora?</h3>
+                <a href="categorias.html" class="btn-doar">Ver Categorias e Doar</a>
+            </div>
+        </section>
+    </main>
+
+    <hr>
+    <footer class="rodape-ajuda">
+        <div class="container-ajuda">
+            <div class="coluna-logo">
+                <h1 class="logo-ajuda">Ajuda +</h1>
+            </div>
+            <div class="coluna-links">
+                <h2>ONGS EM DESTAQUE</h2>
+                <ul>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="projetosUrgentes.html">Projetos urgentes</a></li>
+                </ul>
+            </div>
+            <div class="coluna-links">
+                <h2>SOBRE NÓS</h2>
+                <ul>
+                    <li><a href="termosServico.html">Termos e condições de uso</a></li>
+                    <li><a href="perguntasFrequentes.html">Perguntas frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/config.js"></script>
+    <script src="../JS/sessao.js"></script>
+    <script>
+        const inputBusca = document.getElementById('input-busca');
+        const listaSugestoes = document.getElementById('lista-sugestoes');
+        inputBusca.addEventListener('focus', () => { listaSugestoes.style.display = 'block'; });
+        document.addEventListener('click', (e) => {
+            if (!inputBusca.contains(e.target) && !listaSugestoes.contains(e.target)) {
+                listaSugestoes.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

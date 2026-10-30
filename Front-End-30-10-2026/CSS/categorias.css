@@ -1,0 +1,232 @@
+/* NOVO: Estilo da barra onde ficam os botões de filtros */
+#navegacao-categorias {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0 10px 0;
+    flex-wrap: wrap;
+}
+
+#logoOng{
+    border-radius: 50px;
+}
+
+.botao-categoria {
+    background-color: #f0f4fa;
+    color: var(--azul-card);
+    border: 2px solid var(--azul-card);
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.botao-categoria:hover {
+    background-color: var(--azul-card);
+    color: white;
+}
+
+.botao-categoria.botao-limpar {
+    background-color: transparent;
+    color: #777;
+    border-color: #ccc;
+}
+
+.botao-categoria.botao-limpar:hover {
+    background-color: #eee;
+    color: #333;
+    border-color: #ccc;
+}
+
+.botao-categoria.ativo {
+    background-color: var(--azul-card);
+    color: white;
+    box-shadow: 0 4px 8px rgba(45, 93, 167, 0.3);
+}
+
+/* Estrutura simétrica do conteúdo */
+.bloco-conteudo {
+    
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 40px; 
+    padding: 20px;
+    justify-content: center; 
+}
+
+.coluna-imagens {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-shrink: 0; 
+    width: 180px;   
+}
+
+.coluna-imagens img {
+    width: 100%;
+    height: 130px;  
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.lista-ongs {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-left: 0; 
+}
+
+/* Cartões das ONGs */
+.cartao-ong {
+    display: flex;
+    width: 100%;
+    max-width: 800px; 
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    align-items: center;
+    gap: 20px;
+    border: 3px solid transparent;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    text-decoration: none; 
+    color: inherit; 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cartao-ong:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* NOVO: Classe que o JS ativa para esconder o cartão suavemente */
+.cartao-ong.escondido {
+    display: none !important;
+}
+
+.cartao-ong.perigo-imediato { border-color: var(--vermelho-perigo); box-shadow: 0 0 10px rgba(217, 83, 79, 0.1); }
+.cartao-ong.perigo { border-color: var(--laranja-perigo); }
+.cartao-ong.atencao { border-color: var(--amarelo-atencao); }
+.cartao-ong.contido { border-color: var(--verde-contido); }
+
+.informacoes-principais, .informacoes-extras {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd; 
+    padding: 10px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.informacoes-principais strong, .informacoes-extras strong { font-size: 14px; margin-bottom: 4px; }
+.informacoes-principais span, .informacoes-extras span { font-style: italic; color: #666; font-size: 13px; }
+
+.sem-resultados {
+    width: 100%;
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+#btn-anterior, #btn-proximo{
+    background-color: #4384ca;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+#btn-anterior:hover {
+    background-color: #2c5282;
+}
+
+#btn-proximo:hover {
+    background-color: #2c5282;
+}
+
+.container-paginacao{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+}
+
+#numPagina{
+    margin-top: 10px;
+    padding: 0px 15px;
+}
+
+/* ==========================================
+   RESPONSIVIDADE (celular / tablet)
+   ========================================== */
+.lista-ongs {
+    min-width: 0;
+}
+
+.cartao-ong img {
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* as imagens laterais espremem a lista em telas medias: somem ate 1100px */
+@media (max-width: 1100px) {
+    .coluna-imagens {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .bloco-conteudo {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .lista-ongs {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    #navegacao-categorias {
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .botao-categoria {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .cartao-ong {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        gap: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .cartao-ong .informacoes-principais,
+    .cartao-ong .informacoes-extras {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (hover: none) {
+    .cartao-ong:hover {
+        transform: none;
+    }
+}

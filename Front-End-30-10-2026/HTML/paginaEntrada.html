@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda Gov - Mockup</title>
+    <link rel="stylesheet" href="../CSS/background.css">
+    <link rel="stylesheet" href="../CSS/cabecalho.css">
+    <link rel="stylesheet" href="../CSS/paginaEntrada.css">
+    <link rel="stylesheet" href="../CSS/rodapeGov.css">
+    <script src="../JS/buscas.js"></script>
+
+</head>
+
+<body>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <header>
+        <a href="paginaEntrada.html"><img src="../IMG/ajuda+logo.png" width="250" height="150" alt="Logo Ajuda Gov"></a>
+        <div class="busca">
+            <div class="busca-input">
+                <input type="text" placeholder="Pesquisa ONG" id="input-busca">
+            </div>
+            <ul id="lista-sugestoes" class="sugestoes">
+                <a href="categorias.html"><li onclick="location.href='categorias.html'">🕒 Saúde</li></a>
+                <a href="./detalheDoacao.html"><li onclick="location.href='doacao.html'">🕒 Doação</li></a>
+                <a href="./missaoOng.html"><li onclick="location.href='missaoOng.html'">🕒 Cadastrar ONG</li></a>
+                <a href="./cadastroUsuario.html"><li onclick="location.href='cadastroUsuario.html'">🕒 Cadastrar Usuário</li></a>
+                <a href="./regioes.html"><li onclick="location.href='regioes.html'">🕒 Regiões</li></a>
+            </ul>
+        </div>
+        <a href="login.html" id="linkConta"><div class="user-menu" id="areaConta">Entre na sua conta 👤</div></a>
+    </header>
+
+    <div class="linha"></div>
+    <h2 class="titulo-principal">APOIO E CONEXÃO PARA VOCÊ</h2>
+    <div class="linha"></div>
+
+    <main>
+        <div class="container">
+            <aside class="sidebar">
+                <section class="filtro">
+                    <h3>Categorias</h3>
+                    <ul>
+                        <li><a href="categorias.html?categoria=saude">Saúde ❤️</a></li>
+                        <li><a href="categorias.html?categoria=crianca">Crianças 🧒</a></li>
+                        <li><a href="categorias.html?categoria=idoso">Idosos 👴</a></li>
+                        <li><a href="categorias.html?categoria=animal">Animais 🐾</a></li>
+                    </ul>
+                </section>
+
+                <section class="filtro">
+                    <h3>Regiões</h3>
+                    <ul>
+                        <li><a href="regioes.html?regiao=norte">Norte</a></li>
+                        <li><a href="regioes.html?regiao=nordeste">Nordeste</a></li>
+                        <li><a href="regioes.html?regiao=centro-oeste">Centro-oeste</a></li>
+                        <li><a href="regioes.html?regiao=sudeste">Sudeste</a></li>
+                        <li><a href="regioes.html?regiao=sul">Sul</a></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <div class="linha-vertical"></div>
+            <section class="conteudo">
+                <!-- Os cards de ONG (.card-ong) são inseridos aqui dinamicamente pelo paginaEntrada.js -->
+                <div class="grid-ongs" id="grid-ongs"></div>
+                <div id="paginacao-ongs" class="container-paginacao"></div>
+            </section>
+        </div>
+        <div class="linha"></div>
+        <h2 class="titulo-principal">APOIO E CONEXÃO PARA VOCÊ</h2>
+        <div class="linha"></div>
+
+
+
+<div class="container urgentes">
+    <aside class="sidebar-legenda">
+        <section class="filtro">
+            <h3>Legenda</h3>
+            <ul class="lista-legenda">
+                <li>🔴 Perigo imediato</li>
+                <li>🟠 Perigo</li>
+                <li>🟡 Atenção</li>
+                <li>🟢 Contido</li>
+            </ul>
+        </section>
+    </aside>
+
+    <div class="linha-vertical"></div>
+
+    <!-- Coluna da direita (Cards + Botão) -->
+    <div class="conteudo-direita">
+        <section class="content" id="lista-projetos-urgentes"></section>
+
+        <section class="conteudo-urgentes">
+            <a href="projetosUrgentes.html"><button class="btn-mais">Mostrar mais</button></a>
+        </section>
+    </div>
+</div>
+    </main>
+
+    <footer class="rodape-ajuda">
+        <div class="container-ajuda">
+            <div class="coluna-logo">
+                <h1 class="logo-ajuda">Ajuda +</h1>
+            </div>
+            <div class="coluna-links">
+                <h2>ONGS EM DESTAQUE</h2>
+                <ul>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="projetosUrgentes.html">Projetos urgentes</a></li>
+            </div>
+            <div class="coluna-links">
+                <h2>SOBRE NÓS</h2>
+                <ul>
+                    <li><a href="termosServico.html">Termos e condições de uso</a></li>
+                    <li><a href="perguntasFrequentes.html">Perguntas frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/config.js"></script>
+    <script src="../JS/sessao.js"></script>
+    <script src="../JS/paginaEntrada.js"></script>
+    <script>
+        const inputBusca = document.getElementById('input-busca');
+        const listaSugestoes = document.getElementById('lista-sugestoes');
+        inputBusca.addEventListener('focus', () => { listaSugestoes.style.display = 'block'; });
+        document.addEventListener('click', (e) => {
+            if (!inputBusca.contains(e.target) && !listaSugestoes.contains(e.target)) {
+                listaSugestoes.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

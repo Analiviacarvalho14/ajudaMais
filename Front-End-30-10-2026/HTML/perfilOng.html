@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjudaGov - Perfil da ONG</title>
+    <link rel="stylesheet" href="../CSS/perfilOng.css">
+    <link rel="stylesheet" href="../CSS/background.css">
+    <link rel="stylesheet" href="../CSS/cabecalho.css">
+    <link rel="stylesheet" href="../CSS/paginaEntrada.css">
+    <link rel="stylesheet" href="../CSS/rodapeGov.css">
+</head>
+<body>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <header style="display: flex; justify-content: center;">
+        <a href="paginaEntrada.html"><img src="../IMG/ajuda+logo.png" width="250" height="150" alt="Logo Ajuda Gov"></a>
+    </header>
+
+    <div class="linha"></div>
+    <h2 class="titulo-principal">PERFIL ONG</h2>
+    <div class="linha"></div>
+
+    <main class="main-container">
+        <form id="form-perfil-ong" class="form-container">
+            
+            <div class="card-group">
+                <label for="cnpj">CNPJ da ONG*</label>
+                <div class="input-wrapper">
+                    <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" maxlength="18" required>
+                </div>
+            </div>
+
+            <div class="card-group">
+                <label for="nomeRazaoSocial">Razão Social / Nome da ONG*</label>
+                <div class="input-wrapper">
+                    <input type="text" id="nomeRazaoSocial" name="nomeRazaoSocial" placeholder="Nome Oficial da Instituição" required>
+                </div>
+            </div>
+
+            <div class="card-group">
+                <label for="email">E-mail Institucional*</label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" name="email" placeholder="contato@ong.org.br" required>
+                </div>
+            </div>
+
+            
+
+            <div class="card-group">
+                    <div class="field-box">
+                        <label for="telefone">Telefone / WhatsApp*</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000" maxlength="15" required>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="card-group">
+                <label for="descricao">Descrição das Atividades da ONG</label>
+                <div class="input-wrapper">
+                    <textarea id="descricao" name="descricao" rows="4" placeholder="Descreva brevemente a missão e projetos da ONG..."></textarea>
+                </div>
+            </div>
+
+            <div class="button-container btn-group">
+                <a href="editarPerfilOng.html" class="btn-submit btn-link">Editar Perfil</a>
+                <button type="button" id="btn-logout" class="btn-submit btn-logout">Sair da Conta</button>
+                <button type="button" id="btn-return" class="btn-return">Voltar</button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer class="rodape-ajuda">
+        <div class="container-ajuda">
+            <div class="coluna-logo">
+                <h1 class="logo-ajuda">Ajuda +</h1>
+            </div>
+            <div class="coluna-links">
+                <h2>ONGS EM DESTAQUE</h2>
+                <ul>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="projetosUrgentes.html">Projetos urgentes</a></li>
+            </div>
+            <div class="coluna-links">
+                <h2>SOBRE NÓS</h2>
+                <ul>
+                    <li><a href="termosServico.html">Termos e condições de uso</a></li>
+                    <li><a href="perguntasFrequentes.html">Perguntas frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/perfilOng.js"></script>
+</body>
+</html>

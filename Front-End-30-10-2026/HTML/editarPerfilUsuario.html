@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjudaGov - Editar Perfil</title>
+    <link rel="stylesheet" href="../CSS/perfilUsuario.css">
+    <link rel="stylesheet" href="../CSS/background.css">
+    <link rel="stylesheet" href="../CSS/cabecalho.css">
+    <link rel="stylesheet" href="../CSS/rodapeGov.css">
+</head>
+<body>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <header style="display: flex; justify-content: center;">
+        <a href="paginaEntrada.html">
+            <img src="../IMG/ajuda+logo.png" width="250" height="150" alt="Logo Ajuda Gov">
+        </a>
+    </header>
+
+    <div class="linha"></div>
+    <h2 class="titulo-principal">EDITAR PERFIL</h2>
+    <div class="linha"></div>
+
+    <main class="main-container">
+
+        <form id="form-perfil-usuario" class="form-container">
+            
+            <div class="card-group card-disabled">
+                <label for="cpf">CPF (Não editável)</label>
+                <div class="input-wrapper">
+                    <input type="text" id="cpf" name="cpf" readonly tabindex="-1">
+                </div>
+            </div>
+
+            <div class="card-group">
+                <label for="nome">Seu nome completo</label>
+                <div class="input-wrapper">
+                    <input type="text" id="nome" name="nome" placeholder="Seu Nome Completo" required>
+                </div>
+            </div>
+
+            <div class="card-group">
+                <label for="email">Seu e-mail</label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" name="email" placeholder="Seu E-mail@ong.br" required>
+                </div>
+            </div>
+
+            <div class="card-group">
+                <div class="grid-2-col">
+                    <div class="field-box">
+                        <label for="senha">Nova senha</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="senha" name="senha" placeholder="Sua Senha">
+                            <span class="toggle-password" id="btn-toggle-senha">Ver</span>
+                        </div>
+                    </div>
+                    <div class="field-box">
+                        <label for="confirmarSenha">Confirmar nova senha</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="confirmarSenha" placeholder="Confirmar sua senha">
+                            <span class="toggle-password" id="btn-toggle-confirmar">Ver</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-group">
+                <label for="telefone">Seu telefone</label>
+                <div class="input-wrapper">
+                    <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000" maxlength="15" required>
+                </div>
+            </div>
+
+            <div class="button-container btn-group">
+                <button type="submit" id="save-profile-btn" class="btn-submit" onclick="salvarAlteracoes()">Salvar Alterações</button>
+                <a href="perfilUsuario.html" class="btn-submit btn-cancelar">Cancelar</a>
+            </div>
+
+        </form>
+    </main>
+
+    <footer class="rodape-ajuda">
+        <div class="container-ajuda">
+            <div class="coluna-logo">
+                <h1 class="logo-ajuda">Ajuda +</h1>
+            </div>
+            <div class="coluna-links">
+                <h2>ONGS EM DESTAQUE</h2>
+                <ul>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="projetosUrgentes.html">Projetos urgentes</a></li>
+            </div>
+            <div class="coluna-links">
+                <h2>SOBRE NÓS</h2>
+                <ul>
+                    <li><a href="termosServico.html">Termos e condições de uso</a></li>
+                    <li><a href="perguntasFrequentes.html">Perguntas frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/perfilUsuario.js"></script>
+</body>
+</html>

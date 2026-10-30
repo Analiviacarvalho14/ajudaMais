@@ -1,0 +1,184 @@
+.main-container-detalhes {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Grid dinâmico para os cards */
+.cards-grid-detalhes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Card individual */
+.box-detalhe-item {
+    flex: 1;
+    min-width: 300px;
+    max-width: 420px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 28px 24px 20px 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.box-detalhe-item:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.box-item-title {
+    color: var(--azul-escuro, #0c2340);
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.box-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.box-row-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+    color: #4a5568;
+    font-weight: 600;
+}
+
+.box-row-left label {
+    white-space: nowrap;
+    min-width: 90px;
+    color: #2d3748;
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+}
+
+.custom-select {
+    width: 100%;
+    border: none;
+    background: #f7fafc;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #2d3748;
+    padding: 8px 30px 8px 12px;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: background-color 0.2s;
+}
+
+.custom-select:hover {
+    background-color: #edf2f7;
+}
+
+.custom-arrow {
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    color: #718096;
+    pointer-events: none;
+}
+
+/* Botão Secundário para adicionar mais tabelas */
+.container-acoes-extra {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--azul-escuro, #0c2340);
+    border: 2px dashed #cbd5e0;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secundario:hover {
+    border-color: var(--azul-escuro, #0c2340);
+    background-color: #f7fafc;
+}
+
+/* Botão principal Doar */
+.container-botao-doar {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.btn-doar {
+    background-color: var(--azul-escuro, #0c2340);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 60px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(12, 35, 64, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-doar:hover {
+    background-color: var(--azul-card, #1a3a60);
+    box-shadow: 0 6px 16px rgba(12, 35, 64, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-doar:active {
+    transform: translateY(0);
+}
+
+/* Botão para remover caixa extra */
+.btn-remover-card {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #e53e3e;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    .cards-grid-detalhes {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box-detalhe-item {
+        width: 100%;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.boas-vindas-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.coluna-foto {
+    width: 25%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.conteudo-principal {
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto; 
+    margin-bottom: 10px;
+}
+
+.linha-decorativa {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #007bff, transparent);
+    margin: 20px auto;
+    width: 200px;
+    max-width: 80%;
+}
+
+.botoes-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.link-botao {
+    width: 100%;
+    max-width: 300px;
+    text-decoration: none;
+}
+
+.botao-entrar, 
+.botao-cadastrar {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%; 
+}
+
+.botao-entrar:hover, 
+.botao-cadastrar:hover {
+    background-color: #45a049;
+    transform: scale(1.03);
+}
+
+/* --- REGRAS DE RESPONSIVIDADE --- */
+
+/* Tablets e notebooks pequenos (oculta as fotos laterais para focar no conteúdo) */
+@media (max-width: 900px) {
+    .coluna-foto {
+        display: none;
+    }
+
+    .conteudo-principal {
+        padding: 40px 20px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .logo-img {
+        max-width: 220px;
+    }
+
+    .botao-entrar, 
+    .botao-cadastrar {
+        font-size: 0.95rem;
+        padding: 12px 15px;
+    }
+}

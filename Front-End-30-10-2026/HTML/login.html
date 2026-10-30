@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Ajuda Gov</title>
+  <link rel="stylesheet" href="../CSS/background.css">
+  <link rel="stylesheet" href="../CSS/login.css">
+  <script src="../JS/config.js"></script>
+  <script src="../JS/sessao.js"></script>
+  <script src="../JS/login.js"></script>
+</head>
+
+<body>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <div class="conteudo-pagina">
+    <img src="../IMG/ajuda+logo.png" alt="Ajuda Gov" class="logo-principal">
+
+    <div class="cartao-login">
+      <div class="abas">
+        <button id="abaOng" class="botao-aba ativa" onclick="mudarAba('ong')">ONG</button>
+        <button id="abaUser" class="botao-aba" onclick="mudarAba('user')">USER</button>
+      </div>
+
+      <div class="caixa-entrada">
+        <!-- Campo de E-mail Padronizado -->
+        <div class="campo-container">
+          <label for="email">E-mail*</label>
+          <div class="input-caixa">
+            <input type="email" id="email" placeholder="seu@email.com">
+          </div>
+        </div>
+
+        <!-- Campo de Senha Padronizado -->
+        <div class="campo-container">
+          <label for="senha">Senha*</label>
+          <div class="input-caixa">
+            <input type="password" id="senha" placeholder="••••••••" oninput="validarSenha()">
+            <button type="button" class="btn-ver" id="btnVer" onclick="alternarVisibilidadeSenha()">Ver</button>
+          </div>
+        </div>
+
+        <p id="mensagem-erro" class="mensagem-erro"></p>
+
+        <button type="button" class="botao-entrar" id="botaoEntrar" onclick="tentarEntrar()">Entrar</button>
+
+        <p class="link-cadastro">Ainda não tem conta? <a href="missaoOng.html" id="linkCadastro">Cadastre-se</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

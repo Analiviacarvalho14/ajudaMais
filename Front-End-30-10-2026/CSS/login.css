@@ -1,0 +1,160 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  height: 100vh;
+  margin: 0;
+}
+
+.conteudo-pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-principal {
+  width: 300px; 
+  margin-bottom: 20px;
+}
+
+.cartao-login {
+  background: white;
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.abas {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.botao-aba {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: white;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4a90e2;
+  cursor: pointer;
+  transition: 0.3s; 
+}
+
+.botao-aba.ativa {
+  color: #2c5282;
+  background-color: #fdfdfd;
+  box-shadow: inset 0 -4px 0 #4a90e2;
+}
+
+#abaOng {
+  border-right: 1px solid #ccc;
+}
+
+.caixa-entrada {
+  padding: 24px;
+  text-align: center;
+}
+
+/* Padronização dos Campos (E-mail e Senha) */
+.campo-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.campo-container label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.input-caixa {
+  display: flex;
+  align-items: center;
+  background-color: #eef4fc; /* Fundo azul claro uniforme */
+  border: 1px solid #d0dbe7;
+  border-radius: 8px;
+  padding: 4px 8px 4px 12px;
+}
+
+.input-caixa input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+  color: #333;
+  height: 38px;
+  width: 100%;
+}
+
+.btn-ver {
+  background-color: #f8fafc;
+  border: 1px solid #d0dbe7;
+  border-radius: 6px;
+  color: #4a5568;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.btn-ver:hover {
+  background-color: #e2eaf4;
+  border-color: #b8c7d9;
+}
+
+.botao-entrar {
+  background-color: #337ab7;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 100%;
+}
+
+.botao-entrar:hover {
+  background-color: #286090;
+}
+
+.botao-entrar:disabled {
+  background-color: #9db8cc;
+  cursor: not-allowed;
+}
+
+.mensagem-erro {
+  display: none;
+  color: #cc0000;
+  font-size: 13px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.link-cadastro {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #666;
+}
+
+.link-cadastro a {
+  color: #337ab7;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-cadastro a:hover {
+  text-decoration: underline;
+}

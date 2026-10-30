@@ -1,0 +1,434 @@
+.container-relatorio {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+
+/* TOP CARDS */
+.top-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+
+.card {
+  flex: 1;
+  background: linear-gradient(180deg, #e5e5e5 0%, #d5d5d5 100%);
+  padding: 20px 25px;
+  border-radius: 4px;
+  min-height: 110px;
+}
+
+
+.card h2 {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+
+.card p {
+  font-size: 16px;
+  color: #444;
+  font-style: italic;
+}
+
+
+.card-mission {
+  display: flex;
+  align-items: center;
+}
+
+
+#logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-right: 18px;
+  flex-shrink: 0;
+}
+
+a {
+  text-decoration: none; 
+  color: #1a5b8c;
+}
+
+
+.mission-info h2 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+/* RESUMO FINANCEIRO */
+.financial-section {
+  margin-bottom: 30px;
+}
+
+
+.financial-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+
+.financial-title {
+  color: #1a5b8c;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+.filter-tabs {
+  display: flex;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+
+.tab-btn {
+  flex: 1;
+  background-color: #fff;
+  border: 2px solid #a6a6a6;
+  padding: 6px 0;
+  font-weight: bold;
+  color: #1a5b8c;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+
+.tab-btn.active {
+  border-color: #1a5b8c;
+}
+
+
+.chart-container {
+  border: 2px solid #888;
+  background-color: #fff;
+  padding: 15px;
+  height: 160px;
+  position: relative;
+}
+
+
+/* BOTTOM GRID */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+
+.grid-title {
+  color: #1a5b8c;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+
+.table-box, .help-box {
+  border: 2px solid #666;
+  border-radius: 10px;
+  min-height: 150px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+
+.help-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+
+.box-title {
+  font-size: 22px;
+  color: #1a5b8c;
+}
+
+
+.pill-button {
+  border: 1.5px solid #666;
+  border-radius: 20px;
+  padding: 5px 35px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #1a5b8c;
+}
+
+
+/* TABELAS */
+.container-relatorio table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+
+.container-relatorio table td,
+.container-relatorio table th {
+  padding: 12px 8px;
+  border: 1px solid #777;
+  color: #1a5b8c;
+  font-size: 15px;
+}
+
+
+.container-relatorio table th {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+
+.urgency-high, .urgency-critical {
+  font-weight: 500;
+}
+
+
+.statement-table th {
+  border-top: none;
+}
+
+
+.statement-table td {
+  color: #333;
+}
+
+/* Estilos do Modal de Doação */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+
+.input-valor-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.input-valor-group input {
+    width: 130px;
+    padding: 8px 12px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.btn-prosseguir, .btn-confirmar {
+    background-color: #1a5b8c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-prosseguir:hover, .btn-confirmar:hover {
+    background-color: #134368;
+}
+
+.qrcode-wrapper img {
+    width: 180px;
+    height: 180px;
+    margin: 15px 0;
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.copia-cola-box {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.copia-cola-box input {
+    flex: 1;
+    padding: 6px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.copia-cola-box button {
+    padding: 6px 12px;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-pdf {
+    background-color: #1a5b8c;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-pdf:hover {
+    background-color: #134368;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE (celular / tablet)
+   ========================================== */
+
+/* garante a largura total (o <main> e filho de um body flex em coluna) */
+.container-relatorio {
+  width: 100%;
+}
+
+/* scroll do extrato: a classe existia no HTML mas nao tinha CSS */
+.extrato-scroll {
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.extrato-scroll thead th {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+.grid-card {
+  min-width: 0;
+}
+
+.mission-info {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+#imgLogo {
+  flex-shrink: 0;
+}
+
+#logo {
+  object-fit: cover;
+}
+
+.card-story p {
+  overflow-wrap: anywhere;
+}
+
+.modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 900px) {
+  .top-cards {
+    flex-direction: column;
+  }
+
+  .bottom-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .financial-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .financial-title {
+    text-align: center;
+  }
+
+  .filter-tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    flex: 1 1 30%;
+    min-width: 90px;
+    padding: 8px 4px;
+  }
+
+  .chart-container {
+    height: 240px;
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .container-relatorio table td,
+  .container-relatorio table th {
+    padding: 8px 4px;
+    font-size: 13px;
+  }
+
+  .table-box {
+    overflow-x: auto;
+  }
+}
