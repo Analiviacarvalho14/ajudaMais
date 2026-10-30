@@ -116,8 +116,8 @@ Mostra receitas e despesas de forma visual e fácil de entender.
 ## Equipe
 
 - Emanuella Frederico - Líder: Full-stack & BD;
-- Ana Lívia - Analista: Front-end & design;
-- Alany : Front-end & design;
+- Ana Lívia de Carvalho Ferreira - Analista: Front-end & design;
+- Alany de Castro Tanganelli dos Santos: Front-end & design;
 - Gabriel de Oliveira: Full-stack & BD;
 
 ### Organização do time
