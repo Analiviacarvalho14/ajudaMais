@@ -69,32 +69,32 @@ Cadastram o perfil, mostram sua missão e seus projetos urgentes, e publicam rec
 
  ## Tecnologias utilizadas e por quê
 
-### *HTML*
+### *HTML 5*
 
 Estrutura das páginas;
 É a base de qualquer site e permite criar todas as telas do sistema.
 
-### *CSS*
+### *CSS 3*
 
 Estilo e responsividade;
 Deixa a interface agradável e funcional no celular e no computador, com a identidade visual do projeto em um único arquivo de estilo.
 
-### *JavaScript*
+### *JavaScript ES2025*
 
 Interatividade e integração do front-end com o back-end;
 Linguagem da web, usada para filtros, busca, formulários e para ligar as telas aos dados.
 
-### *Java*
+### *Java 25*
 
 Back-end e autenticação;
 Permite criar uma API organizada, com login, logout e verificação segura do usuário.
 
-### *MySQL*
+### *MySQL 26*
 
 Banco de dados;
 Guarda com segurança os dados de usuários, ONGs, doações e imagens, com relacionamentos bem definidos (modelo MER).
 
-### *Chart.js*
+### *Chart.js 4.6.1*
 
 Gráficos financeiros;
 Mostra receitas e despesas de forma visual e fácil de entender.
@@ -115,10 +115,10 @@ Mostra receitas e despesas de forma visual e fácil de entender.
 
 ## Equipe
 
-- Emanuella - Líder: Full-stack & BD;
+- Emanuella Frederico - Líder: Full-stack & BD;
 - Ana Lívia - Analista: Front-end & design;
-- Alany: Front-end & design;
-- Gabriel: Full-stack & BD;
+- Alany : Front-end & design;
+- Gabriel de Oliveira: Full-stack & BD;
 
 ### Organização do time
 O desenvolvimento foi dividido em sprints. Em vez de várias pessoas na mesma tarefa, cada integrante ficou responsável por páginas específicas. Cada alteração é feita em uma branch e integrada ao código principal pela líder, depois dos testes.
@@ -143,5 +143,6 @@ O desenvolvimento foi dividido em sprints. Em vez de várias pessoas na mesma ta
  2. Configure o banco de dados MySQL
  4. Inicie o back-end
  6. Abra o front-end no navegador
+![Fluxograma de navegação](fluxograma.png)
 
 ## *Projeto acadêmico desenvolvido para fins educacionais.*
